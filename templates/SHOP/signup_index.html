@@ -1,0 +1,135 @@
+
+{% load static %}
+<html lang="zxx">
+
+<head>
+	<title>Validator Signup Form Responsive Widget Template :: w3layouts</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Validator Signup Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"/>
+{#	<script>#}
+{#		addEventListener("load", function () {#}
+{#			setTimeout(hideURLbar, 0);#}
+{#		}, false);#}
+{##}
+{#		function hideURLbar() {#}
+{#			window.scrollTo(0, 1);#}
+{#		}#}
+{#	</script>#}
+	<!-- Meta tag Keywords -->
+	<!-- css file -->
+	<link rel="stylesheet" href="/static/shop_signup/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<!-- //css file -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
+	<!-- //web-fonts -->
+
+</head>
+
+<body>
+	<!-- title -->
+	<h1>
+		<span>S</span>hop
+		<span>S</span>ignup
+		<span>F</span>orm
+	</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form validate="true" action="/myapp/signup_post/" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+			<div class="form-group">
+				<label for="exampleInputText">Name</label>
+				<input type="text" class="form-control" name="name" id="exampleInputText" placeholder="Enter Name" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">Owner Name</label>
+				<input type="text" class="form-control" name="owner" id="exampleInputText" placeholder="Enter Owner Name" required>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">City</label>
+				<input type="text" class="form-control" name="city" id="exampleInputText" placeholder="Enter City" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">District</label><br>
+                <select name="DISTRICT" required class="form-control" >
+            <option value="Kasargod">Kasargod</option>
+            <option value="Kannur">Kannur</option>
+            <option value="Wayand">Wayanad</option>
+            <option value="Kozhikkode">Kozhikkode</option>
+            <option value="Malappuram">Malappuram</option>
+            <option value="Palakkad">Palakkad</option>
+            <option value="Thrissur">Thrissur</option>
+            <option value="Eranakulam">Ernakulam</option>
+            <option value="Idukki">Idukki</option>
+            <option value="Kottayam">Kottayam</option>
+            <option value="Alapppuzha">Alapuzha</option>
+            <option value="Pathanmthitta">Pathanamthitta</option>
+            <option value="Kollam">Kollam</option>
+            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+        </select>
+{#				<input type="text" class="form-control" name="name" id="exampleInputText" placeholder="Enter Name" required>#}
+			</div>
+
+            <div class="form-group">
+				<label for="exampleInputText">Pin</label>
+				<input type="text" class="form-control" name="pin" id="exampleInputText" placeholder="Enter Name" required>
+			</div>
+			<div class="form-group">
+				<label for="exampleMobile1">Mobile Number</label>
+				<input type="mobile" class="form-control" name="ph" id="exampleMobile1" placeholder="Mobile number" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">Web Site</label>
+				<input type="text" class="form-control" name="web" id="exampleInputText" placeholder="Enter Website Url" >
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">Image</label><br>
+				<input type="file" class="form-control" name="fileField" id="exampleInputText" placeholder="Upload Image" required>
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input maxlength="10" minlength="3" type="password" name="pswrd" class="form-control" id="exampleInputPassword1" placeholder="Password"
+				    required>
+			</div>
+			<div class="form-group">
+				<label for="exampleConfirmPassword1">Confirm Password</label>
+				<input type="password" class="form-control" id="exampleConfirmPassword1" name="cpassword" placeholder="Confirm Password" required data-match="password"
+				    data-match-field="#exampleInputPassword1">
+			</div>
+			<div class="form-group">
+				<label class="checkbox-inline">
+					<input type="checkbox" value="true" required>I agree to the terms and conditions
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+{#		<p>&copy; 2018 Validator Signup Form. All rights reserved | Design by#}
+{#			<a href="http://w3layouts.com">W3layouts</a>#}
+{#		</p>#}
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	<script src="/static/shop_signup/js/jquery-2.2.3.min.js"></script>
+	<!-- //Jquery -->
+	<!-- Jquery -->
+	<script src="/static/shop_signup/js/jquery-simple-validator.min.js"></script>
+	<!-- //Jquery -->
+
+</body>
+
+</html>

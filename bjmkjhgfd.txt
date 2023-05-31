@@ -1,0 +1,3 @@
+Executed SQL Statement : delete from `livingart`.`myapp_login` where `id` = '14' 
+Error Number : 1451 
+Error Message: Cannot delete or update a parent row: a foreign key constraint fails (`livingart`.`myapp_shop`, CONSTRAINT `myapp_shop_LOGIN_id_0b42e874_fk_myapp_login_id` FOREIGN KEY (`LOGIN_id`) REFERENCES `myapp_login` (`id`)) 

@@ -1,0 +1,44 @@
+{% extends "ADMIN/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/myapp/view_new_institutes_post/">
+    <table class="bx-pull-left">
+        <tr>
+            <td>
+                <input type="text" class="form-control" name="name"/></td><td> <input type="submit" value="search" class="btn btn-success"/></td>
+        </tr>
+    </table>
+{% csrf_token %}
+  <table class="table table-bordered table-striped">
+    <tr class="bg-dark">
+      <th  height="28">Sl_No</th>
+      <th >Name</th>
+        <th>Manager Name</th>
+      <th >Email</th>
+        <th >City</th>
+        <th >District</th>
+        <th >Pin</th>
+        <th >Phone</th>
+{#        <td width="123">Status</td>#}
+        <th width="123">Image</th>
+        <th></th>
+        <th></th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+        <td><a href="{{ i.website }}">{{ i.name }}</a></td>
+        <td>{{ i.manager }}</td>
+      <td>{{ i.email }}</td>
+      <td>&nbsp;{{ i.city }}</td>
+      <td>&nbsp;{{ i.district }}</td>
+        <td>{{ i.pin}}</td>
+        <td>&nbsp;{{ i.phone }}</td>
+{#        <td>&nbsp;{{ i.status }}</td>#}
+        <td><img src="{{ i.image }}" width="100" height="100"></td>
+      <td><a href="/myapp/approve_institute/{{ i.id }}" class="btn btn-success">APPROVE</a></td>
+      <td><a href="/myapp/reject_institute/{{ i.id }}" class="btn btn-danger">REJECT</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

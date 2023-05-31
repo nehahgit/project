@@ -1,0 +1,68 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+<body>
+
+<form id="form1" name="form1" method="post"  enctype="multipart/form-data"  action="/myapp/profile_edit_post/">
+    {% csrf_token %}
+<input type="hidden" value="{{ data.id }}" name="id">
+  <table class="table-bordered table-hover table-striped">
+
+   <tr>
+      <td width="87" height="187">NAME</td>
+      <td width="642"><label for="NAME"></label>
+      <input type="text" name="name" id="name" value="{{ data.shop_name }}" class="form-control"/></td>
+    </tr>
+  <tr>
+      <td width="87" height="187">OWNER NAME</td>
+      <td width="642"><label for="NAME"></label>
+      <input type="text" name="owner" id="owner" value="{{ data.owner }}" class="form-control" /></td>
+    </tr>
+      <td height="40">District</td>
+        <td><select name="DISTRICT" class="form-control">
+            <option {% if data.district == 'Kasargod' %}selected{% endif %} value="Kasargod">Kasargod</option>
+            <option {% if data.district == 'Kannur' %}selected{% endif %}value="Kannur">Kannur</option>
+            <option {% if data.district == 'Wayanad' %}selected{% endif %} value="Wayanad">Wayanad</option>
+            <option {% if data.district == 'Kozhikkode' %}selected{% endif %} value="Kozhikkode">Kozhikkode</option>
+            <option {% if data.district == 'Malappuram' %}selected{% endif %} value="Malappuram">Malappuram</option>
+            <option {% if data.district == 'Palakkad' %}selected{% endif %} value="Palakkad">Palakkad</option>
+            <option {% if data.district == 'Thrissur' %}selected{% endif %} value="Thrissur">Thrissur</option>
+            <option {% if data.district == 'Ernakulam' %}selected{% endif %} value="Ernakulam">Ernakulam</option>
+            <option {% if data.district == 'Idukki' %}selected{% endif %} value="Idukki">Idukki</option>
+            <option {% if data.district == 'Kottayam' %}selected{% endif %} value="Kottayam">Kottayam</option>
+            <option {% if data.district == 'Alapuzha' %}selected{% endif %} value="Alapuzha">Alapuzha</option>
+            <option {% if data.district == 'Pathanamthitta' %}selected{% endif %} value="Pathanamthitta">Pathanamthitta</option>
+            <option {% if data.district == 'Kollam' %}selected{% endif %} value="Kollam">Kollam</option>
+            <option {% if data.district == 'Thiruvananthapuram' %}selected{% endif %} value="Thiruvananthapuram">Thiruvananthapuram</option>
+        </select></td>
+    <tr>
+      <td height="187">City</td>
+      <td>
+      <input type="text" name="city" id="city" value="{{ data.city }}" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td height="187">Pin</td>
+      <td>
+      <input type="text" name="pin" id="pin" value="{{ data.pin }}" class="form-control" /></td>
+    </tr>
+    <tr>
+      <td height="187">Phone</td>
+      <td>
+      <input type="phone" name="ph" id="ph" value="{{ data.phone }}" class="form-control"/></td>
+    </tr>
+      <tr>
+      <td height="187">Email</td>
+      <td>
+      <input type="email" name="email" id="email" value="{{ data.email }}" class="form-control" /></td>
+    </tr>
+    <tr>
+      <td height="187">IMAGE </td>
+      <td> <input type="file" name="fileField" id="fileField" value="" class="form-control" /><br>
+      <img src="{{ data.image }}" height="80px" width="80px"> </td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="submit" id="submit" value="Submit" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

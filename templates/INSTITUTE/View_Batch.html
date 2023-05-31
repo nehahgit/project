@@ -1,0 +1,29 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <td width="101">Name</td>
+        <td width="102">COURSE NAME</td>
+      <td width="101">DATE</td>
+        <td width="102">Start Time</td>
+        <td width="102">End Time</td>
+      <td width="101">NO OF SEATS</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ i.batch_name }}</td>
+        <td>{{ i.COURSE.course_name }}</td>
+         <td>{{ i.date }}</td>
+        <td>{{ i.time1 }}</td>
+        <td>{{ i.time2 }}</td>
+         <td>{{ i.no_of_seats}}</td>
+{#      <td>{{ i.SCHEDULE.date}}<br>{{ i.SCHEDULE.time }}</td>#}
+         <td><a href="/myapp/batch_edit/{{ i.id }}" class="btn btn-success">EDIT</a></td>
+{#        <td><a href="/myapp/batch_delete/{{ i.id }}" onclick="return confirm('Do you really want to delete????')">DELETE</a></td>#}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

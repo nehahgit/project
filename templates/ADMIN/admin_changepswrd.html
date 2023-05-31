@@ -1,0 +1,28 @@
+{% extends "ADMIN/index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/admin_pswrd_post/">
+  <table class="table table-bordered table-striped">
+      {% csrf_token %}
+    <tr>
+      <td width="180">Current Password</td>
+      <td width="413"><label for="curntpswrd"></label>
+      <input type="text" name="curntpswrd" id="curntpswrd" /></td>
+    </tr>
+    <tr>
+      <td>New Password</td>
+      <td><label for="newpswrd"></label>
+      <input type="text" name="newpswrd" id="newpswrd" /></td>
+    </tr>
+    <tr>
+      <td>Confirm Password</td>
+      <td><label for="cnfrmpswrd"></label>
+      <input type="text" name="cnfrmpswrd" id="cnfrmpswrd" /></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="reset" id="reset" value="Reset" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "ADMIN/index.html" %}
+{% block body %}
+
+<form action="/myapp/reject_shop_post/" method="post">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>Reason</td><input type="hidden" value="{{ id }}" name="id">
+            <td><textarea name="reason" class="form-control"></textarea></td>
+        </tr>
+        <tr><td></td>
+        <td><input type="submit" value="Submit" class="btn btn-success" name="button"></td></tr>
+    </table>
+</form>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'SHOP/shop_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+    <table>
+        <tr>
+            <td>From Date</td>
+            <td><input type="date"name="Fdate"id="fdate"value="FromDate"></td>
+            <td>To Date</td>
+            <td><input type="date" name="Tdate" id="tdate" value="ToDate"/></td>
+            <td><input type="submit" name="search"id="search"value="Search" class="btn-success"></td>
+        </tr>
+    </table>
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <td>Sl_No</td>
+      <td>Date</td>
+        <td>User Name</td>
+        <td></td>
+      <td width="123">Total Amount</td>
+        <td></td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td height="241">{{ forloop.counter }}</td>
+      <td>{{i.date  }}</td>
+      <td>{{ i.USER.name }}</td>
+        <td>{{ i.REQUEST.INSTRUMENT.name }}</td>
+      <td>{{ i.amount }}</td>
+    <td><a href="" class="btn btn-success">Print</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

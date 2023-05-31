@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="/myapp/instisignup_post/">
+    {% csrf_token %}
+  <table width="745" height="356" border="1">
+      <tr>
+       <td>Manager Name</td>
+       <td width="642"><label for="NAME"></label>
+      <input type="text" name="manager" id="manager" /></td>
+   </tr>
+    <tr>
+      <td width="87" height="34">NAME</td>
+      <td width="642"><label for="NAME"></label>
+      <input type="text" name="NAME" id="NAME" /></td>
+    </tr>
+       <tr>
+      <td width="87" height="187">Web Site</td>
+      <td width="642"><label for="web"></label>
+      <input type="text" name="web" id="web" /></td>
+    </tr>
+    <tr>
+      <td height="40">PHONE</td>
+      <td><label for="PHONE"></label>
+      <input type="text" name="PHONE" id="PHONE" /></td>
+    </tr>
+    <tr>
+      <td height="40">PIN</td>
+      <td><label for="PIN"></label>
+      <input type="text" name="PIN" id="PIN" /></td>
+    </tr>
+      <tr>
+      <td height="40">Street</td>
+      <td><label for="CITY"></label>
+      <input type="text" name="CITY" id="CITY" /></td>
+    </tr>
+    <tr>
+      <td height="40">DISTRICT</td>
+        <td><select name="DISTRICT">
+            <option>Kasargod</option>
+            <option>Kannur</option>
+            <option>Wayanad</option>
+            <option>Kozhikkode</option>
+            <option>Malappuram</option>
+            <option>Palakkad</option>
+            <option>Thrissur</option>
+            <option>Ernakulam</option>
+            <option>Idukki</option>
+            <option>Kottayam</option>
+            <option>Alapuzha</option>
+            <option>Pathanamthitta</option>
+            <option>Kollam</option>
+            <option>Thiruvananthapuram</option>
+        </select></td>
+
+{#      <td><label for="DISTRICT"></label>#}
+{#      <input type="text" name="DISTRICT" id="DISTRICT" /></td>#}
+    </tr>
+      <tr>
+      <td height="40">EMAIL</td>
+      <td><label for="EMAIL"></label>
+      <input type="email" name="EMAIL" id="EMAIL" /></td>
+    </tr>
+    <tr>
+      <td height="144">IMAGE </td>
+      <td> <input type="file" name="fileField" id="fileField" /></td>
+    </tr>
+      <tr>
+          <td height="144">Password</td>
+          <td><input type="password" name="pswrd" id="pswrd"></td>
+      </tr>
+      <tr>
+          <td height="144">Confirm Password</td>
+          <td><input type="password" name="confirm_pswrd" id="confirm_pswrd"></td>
+      </tr>
+    <tr>
+      <td height="40
+      "><input type="submit" name="submit3" id="submit3" value="SUBMIT" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
