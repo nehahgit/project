@@ -1,0 +1,46 @@
+{% extends 'SHOP/shop_index.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped table-bordered">
+      <tr>
+      <th>Image</th>
+        <td><img src="{{ data.image }}" height="100px" width="100px" style="border-radius: 5%"></td>
+
+    </tr>
+    <tr>
+      <th>Name</th>
+        <td>{{ data.shop_name }}</td>
+    </tr>
+      <tr>
+      <th>Owner Name</th>
+        <td>{{ data.owner }}</td>
+    </tr>
+    <tr>
+      <th>City</th>
+        <td>{{ data.city }}</td>
+    </tr>
+    <tr>
+      <th>District</th>
+        <td>{{ data.district }}</td>
+    </tr>
+      <tr>
+      <th>Pin</th>
+        <td>{{ data.pin }}</td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+         <td>{{ data.phone}}</td>
+
+    </tr>
+    <tr>
+      <th>Email</th>
+        <td>{{ data.email }}</td>
+    </tr>
+      <tr>
+          <td></td>
+          <td><a href="/myapp/profile_edit/{{ data.id }}" class="btn btn-primary">Edit</a></td>
+      </tr>
+
+  </table>
+</form>
+{% endblock %}

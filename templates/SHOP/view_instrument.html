@@ -1,0 +1,31 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <th>Sl_No</th>
+      <th>Instrument Name</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Rent Amount</th>
+      <th>Category Name</th>
+        <th></th>
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.name}}</td>
+      <td><img src="{{ i.imageinstru }}" height="80px" width="80px"> </td>
+      <td>{{ i.desc }}</td>
+      <td>{{ i.rent_amount }}</td>
+      <td>{{ i.CATEGORY.category_name }}</td>
+    <td><a href="/myapp/edit_instrument/{{ i.id }}#grids" class="btn btn-primary">Edit</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

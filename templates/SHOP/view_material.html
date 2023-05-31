@@ -1,0 +1,29 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <td width="89">Sl_No</td>
+      <td width="272">Name</td>
+      <td width="272">Image</td>
+      <td width="272">Description</td>
+      <td width="272">Rent Amount</td>
+      <td width="272">Category Name</td>
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.name}}</td>
+      <td><img src="{{ i.image }}" height="80px" width="80px"> </td>
+      <td>{{ i.description }}</td>
+      <td>{{ i.rent_amount }}</td>
+      <td>{{ i.CATEGORY.category_name }}</td>
+    <td><a href="/myapp/edit_mat/{{ i.id }}#grids" class="btn btn-info">Edit</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

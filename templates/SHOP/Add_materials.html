@@ -1,0 +1,49 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" enctype="multipart/form-data" action="/myapp/shop_material_post/">
+    {% csrf_token %}
+  <table class="table-bordered table-hover table-striped">
+      <tr>
+      <td width="94">category name</td>
+      <td width="605"><label for="name"></label>
+
+          <select name="catname" class="form-control">
+              {% for i in data %}
+          <option value="{{ i.id }}">{{ i.category_name }}
+
+          </option>
+              {% endfor %}
+          </select>
+      </td>
+    </tr>
+    <tr>
+      <td width="94">Name</td>
+      <td width="605"><label for="name"></label>
+      <input type="text" name="name" id="name" /><label for="mat_name" class="form-control"></label></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><input type="file" name="imagemat" id="imagemat" class="form-control" /></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><label for="descr"></label>
+      <textarea name="descr" id="descr" cols="45" rows="5" class="form-control"></textarea></td>
+    </tr>
+    <tr>
+      <td>Prize</td>
+      <td><label for="prize"></label>
+      <input type="text" name="prize" id="prize" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="add" id="add" value="ADD" class="btn btn-success" /></td>
+    </tr>
+    <tr>
+      <td><a href="#">VIEW</a></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

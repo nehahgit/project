@@ -1,0 +1,43 @@
+{% extends "SHOP/sh_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <td width="36">Sl_No</td>
+{#      <td width="123">Name</td>#}
+{#      <td width="123">Email</td>#}
+{#      <td width="123">House Name</td>#}
+{#      <td width="123">City</td>#}
+{#      <td width="123">District</td>#}
+{#        <td width="123">Pin</td>#}
+{#        <td width="123">Phone</td>#}
+      <td width="123">Material Name</td>
+{#        <td width="123">Request</td>#}
+        <td width="123">Date</td>
+        <td>User info</td>
+{#        <td width="123">Status</td>#}
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td height="420">&nbsp;</td>
+      <td>{{ forloop.counter }}</td>
+{#      <td>{{ i.CUSTOMER.name }}</td>#}
+{#      <td>{{ i.CUSTOMER.email }}</td>#}
+{#      <td>{{ i.CUSTOMER.house_name }}</td>#}
+{#      <td>{{ i.CUSTOMER.city }}</td>#}
+{#      <td>{{ i.CUSTOMER.district }}</td>#}
+{#        <td>{{ i.CUSTOMER.pin }}</td>#}
+{#        <td>{{ i.CUSTOMER.phone }}</td>#}
+        <td>{{ i.MATERIAL.name }}</td>
+{#        <td>{{ i.requ }}</td>#}
+        <td>{{ i.date }}</td>
+        <td>{{ i.USER.name }}</td>
+{#        <td>{{ i.status }}</td>#}
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

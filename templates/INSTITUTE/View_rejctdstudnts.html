@@ -1,0 +1,41 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table-bordered table-hover table-striped">
+      <tr class="bg-dark">
+
+      <td width="100">Sl_No</td>
+{#      <td width="104">Name</td>#}
+{#      <td width="104">House Name</td>#}
+{#      <td width="104">Email</td>#}
+{#         <td width="104">City</td>#}
+{#         <td width="104">District</td>#}
+{#         <td width="104">Pin</td>#}
+{#         <td width="104">Phone</td>#}
+{#        <td width="104">Request</td>#}
+        <td>Date</td>
+        <th>User Info</th>
+{#        <td width="104">Status</td>#}
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+{#      <td>{{ i.STUDENT.name }}</td>#}
+{#      <td>{{ i.STUDENT.house_name }}</td>#}
+{#      <td>{{ i.STUDENT.email }}</td>#}
+{#      <td>{{ i.STUDENT.city }}</td>#}
+{#      <td>{{ i.STUDENT.district }}</td>#}
+{#      <td>{{ i.STUDENT.pin }}</td>#}
+{#      <td>{{ i.STUDENT.phone }}</td>#}
+{#      <td>{{ i.requ }}</td>#}
+      <td>{{ i.date }}</td>
+        <td>{{ i.USER.name }}<br>
+        {{ i.USER.email }}</td>
+{#      <td>{{ i.status }}</td>#}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

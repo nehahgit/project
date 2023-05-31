@@ -1,0 +1,141 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+
+-->
+{% load static %}
+<html lang="zxx">
+
+<head>
+	<title>institute signup</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Validator Signup Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css file -->
+	<link rel="stylesheet" href="/static/signup/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<!-- //css file -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
+	<!-- //web-fonts -->
+
+</head>
+
+<body>
+	<!-- title -->
+	<h1>
+		<span>I</span>nstitute
+		<span>S</span>ignup
+		<span>F</span>orm
+	</h1>
+	<!-- //title -->
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form validate="true" action="/myapp/instisignup_post/"  enctype="multipart/form-data" method="post">
+{% csrf_token %}
+			<div class="form-group">
+				<label for="exampleInputText">Institute Name</label>
+				<input type="text" class="form-control" name="NAME" id="exampleInputText" placeholder="Enter Name" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">Manager Name</label>
+				<input type="text" class="form-control" name="manager" id="exampleInputText" placeholder="Enter manager Name" required>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" name="EMAIL" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">City</label>
+				<input type="text" class="form-control" name="CITY" id="exampleInputText" placeholder="Enter City" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">District</label><br>
+                <select name="DISTRICT" required class="form-control" >
+            <option>Kasargod</option>
+            <option>Kannur</option>
+            <option>Wayanad</option>
+            <option>Kozhikkode</option>
+            <option>Malappuram</option>
+            <option>Palakkad</option>
+            <option>Thrissur</option>
+            <option>Ernakulam</option>
+            <option>Idukki</option>
+            <option>Kottayam</option>
+            <option>Alapuzha</option>
+            <option>Pathanamthitta</option>
+            <option>Kollam</option>
+            <option>Thiruvananthapuram</option>
+        </select>
+{#				<input type="text" class="form-control" name="name" id="exampleInputText" placeholder="Enter Name" required>#}
+			</div>
+
+            <div class="form-group">
+				<label for="exampleInputText">Pin</label>
+				<input type="text" class="form-control" name="PIN" id="exampleInputText" placeholder="Enter Name" required>
+			</div>
+			<div class="form-group">
+				<label for="exampleMobile1">Mobile Number</label>
+				<input type="mobile" class="form-control" name="PHONE" id="exampleMobile1" placeholder="Mobile number" required>
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">Web Site</label>
+				<input type="text" class="form-control" name="web" id="exampleInputText" placeholder="Enter Website Url" >
+			</div>
+            <div class="form-group">
+				<label for="exampleInputText">Image</label><br>
+				<input type="file" class="form-control" name="fileField" id="exampleInputText" placeholder="Upload Image" required>
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input maxlength="10" minlength="3" type="password" name="pswrd" class="form-control" id="exampleInputPassword1" placeholder="Password"
+				    required>
+			</div>
+			<div class="form-group">
+				<label for="exampleConfirmPassword1">Confirm Password</label>
+				<input type="password" class="form-control" id="exampleConfirmPassword1" name="cpassword" placeholder="Confirm Password" required data-match="password"
+				    data-match-field="#exampleInputPassword1">
+			</div>
+			<div class="form-group">
+				<label class="checkbox-inline">
+					<input type="checkbox" value="true" required>I agree to the terms and conditions
+				</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+	<!-- //content -->
+
+	<!-- copyright -->
+	<div class="footer">
+		<p>&copy; 2018 Validator Signup Form. All rights reserved | Design by
+			<a href="http://w3layouts.com">W3layouts</a>
+		</p>
+	</div>
+	<!-- //copyright -->
+
+	<!-- Jquery -->
+	<script src="/static/signup/js/jquery-2.2.3.min.js"></script>
+	<!-- //Jquery -->
+	<!-- Jquery -->
+	<script src="/static/signup/js/jquery-simple-validator.min.js"></script>
+	<!-- //Jquery -->
+
+</body>
+
+</html>

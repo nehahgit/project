@@ -1,0 +1,43 @@
+{% extends 'INSTITUTE/insti_index.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered table-striped">
+    <tr class="bg-dark">
+        <td width="37">Sl_No</td>
+{#        <td width="104">Name</td>#}
+{#        <td width="104">House Name</td>#}
+{#        <td width="104">email </td>#}
+{#        <td width="104">City</td>#}
+{#        <td width="104">District</td>#}
+{#        <td width="104">Pin</td>#}
+{#        <td width="104">Phone</td>#}
+{#        <td width="104">Request</td>#}
+        <td width="104">Date</td>
+        <th>User info</th>
+        <th></th>
+        <th></th>
+{#        <td width="104">Status</td>#}
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+{#      <td>{{ i.STUDENT.name }}</td>#}
+{#      <td>{{ i.STUDENT.house_name }}</td>#}
+{#      <td>{{ i.STUDENT.email }}</td>#}
+{#      <td>{{ i.STUDENT.city }}</td>#}
+{#      <td>{{ i.STUDENT.district }}</td>#}
+{#        <td>{{ i.STUDENT.pin }}</td>#}
+{#        <td>{{ i.STUDENT.phone }}</td>#}
+{#        <td>{{ i.requ }}</td>#}
+        <td>{{ i.date }}</td>
+        <td>{{ i.USER.name }}<br>
+        {{ i.USER.email }}</td>
+{#         <td>{{ i.status }}</td>#}
+      <td><a href="/myapp/accept_requ/{{ i.id }}" class="btn btn-success">ACCEPT</a></td>
+      <td><a href="/myapp/reject_requ/{{ i.id }}" class="btn btn-danger">REJECT</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

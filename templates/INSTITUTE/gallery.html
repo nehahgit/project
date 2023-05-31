@@ -1,0 +1,32 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/gallery_post/" enctype="multipart/form-data">
+    {% csrf_token %}
+  <table class="table-bordered table-hover table-striped">
+  <tr>
+    <td width="73">Image1</td>
+    <td width="709"><label for="image1insti"></label>
+    <input type="file" name="image1insti" id="image1insti" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>Image2</td>
+    <td><label for="image3insti"></label>
+    <input type="file" name="image3insti" id="image3insti" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td>Image3</td>
+    <td><label for="image4insti"></label>
+    <input type="file" name="image4insti" id="image4insti" class="form-control"/></td>
+  </tr>
+  <tr>
+    <td><input type="submit" name="submit" id="submit" value="SUBMIT" class="btn btn-success" /></td>
+  </tr>
+  <tr>
+    <td><a href="/myapp/insti_view_gallery/{{ i.id }}" class="btn btn-info">VIEW</a></td>
+  </tr>
+</table>
+</form>
+</body>
+{% endblock %}

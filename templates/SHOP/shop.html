@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post"  enctype="multipart/form-data"  action="/myapp/signup_post/">
+    {% csrf_token %}
+  <table width="786" border="1">
+      <tr>
+      <td width="87" height="187">OWNER NAME</td>
+      <td width="642"><label for="NAME"></label>
+      <input type="text" name="owner" id="owner" /></td>
+    </tr>
+   <tr>
+      <td width="87" height="187">NAME</td>
+      <td width="642"><label for="NAME"></label>
+      <input type="text" name="name" id="name" /></td>
+    </tr>
+      <td height="40">District</td>
+        <td><select name="DISTRICT">
+            <option>Kasargod</option>
+            <option>Kannur</option>
+            <option>Wayanad</option>
+            <option>Kozhikkode</option>
+            <option>Malappuram</option>
+            <option>Palakkad</option>
+            <option>Thrissur</option>
+            <option>Ernakulam</option>
+            <option>Idukki</option>
+            <option>Kottayam</option>
+            <option>Alapuzha</option>
+            <option>Pathanamthitta</option>
+            <option>Kollam</option>
+            <option>Thiruvananthapuram</option>
+        </select></td>
+    <tr>
+      <td height="187">City</td>
+      <td><label for="city"></label>
+      <input type="text" name="city" id="city" /></td>
+    </tr>
+    <tr>
+      <td height="187">Pin</td>
+      <td><label for="pin"></label>
+      <input type="text" name="pin" id="pin" /></td>
+    </tr>
+    <tr>
+      <td height="187">Phone</td>
+      <td><label for="phone"></label>
+      <input type="phone" name="ph" id="ph" /></td>
+    </tr>
+      <tr>
+      <td height="187">Email</td>
+      <td><label for="email"></label>
+      <input type="email" name="email" id="email" /></td>
+    </tr>
+    <tr>
+      <td height="187">IMAGE </td>
+      <td> <input type="file" name="fileField" id="fileField" /></td>
+    </tr>
+      <tr>
+      <td width="87" height="187">Web site</td>
+      <td width="642"><label for="NAME"></label>
+      <input type="text" name="web" id="website" /></td>
+    </tr>
+      <tr>
+          <td height="187">Password</td>
+          <td><input type="password" name="pswrd" id="pswrd"></td>
+      </tr>
+      <tr>
+          <td height="187">Confirm Password</td>
+          <td><input type="password" name="confirm_pswrd" id="confirm_pswrd"></td>
+      </tr>
+    <tr>
+      <td><input type="submit" name="submit" id="submit" value="Signup" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

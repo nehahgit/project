@@ -1,0 +1,35 @@
+{% extends "ADMIN/index.html" %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="/myapp/name_search/">
+  <table class="table table-bordered table-striped table-hover">
+      <tr>
+          <td>Search</td>
+          <td>
+              <input type="text" name="district" class="form-control"/> </td><td><input type="submit" value="search" class="btn btn-primary"/></td>
+      </tr>
+    <tr class="bg-dark">
+      <td width="50" height="60">Sl_No</td>
+      <td width="100">Name</td>
+        <td width="100">Email</td>
+      <td width="100">Address</td>
+      <td width="100">City</td>
+      <td width="100">District</td>
+        <td width="100">Pin</td>
+      <td width="100">Phone</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.name }}</td>
+      <td>{{ i.email }}</td>
+      <td>{{ i.address }}</td>
+      <td>{{ i.city }}</td>
+      <td>{{i.district  }}</td>
+      <td>{{i.pin  }}</td>
+      <td>{{i.phone  }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

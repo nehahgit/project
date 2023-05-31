@@ -1,0 +1,44 @@
+{% extends "ADMIN/index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/view_approved_shops_post/">
+<table class="table table-bordered table-striped">
+    <tr>
+    <td>
+        <input type="text" name="name"/></td><td> <input type="submit" value="search" class="btn btn-primary"/></td>
+    </tr>
+</table>
+{% csrf_token %}
+
+  <table class="table table-bordered table-striped">
+    <tr class="bg-dark">
+
+      <td  height="41">Sl_No</td>
+      <td > Name</td>
+      <td >Owner Name</td>
+      <td >City</td>
+      <td >District</td>
+      <td >Pin</td>
+      <td >Phone</td>
+        <td>Email</td>
+      <td >Image</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.shop_name }}</td>
+              <td>{{ i.owner }}</td>
+      <td>{{ i.city }}</td>
+      <td>{{ i.district }}</td>
+        <td>{{ i.pin }}</td>
+      <td>{{ i.phone }}</td>
+      <td>{{ i.email }}</td>
+      <td><img src="{{ i.image }}"width="100" height="100"></td>
+{#      <td>{{ i.status }}</td>#}
+      
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+
+  <table class="table-bordered table-hover table-striped">
+    <tr style="background-color: black;color: white">
+      <td width="304">IMAGE1</td>
+      <td width="304">IMAGE2</td>
+      <td width="304">IMAGE3</td>
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td><img src="{{ i.image1 }}" width="100" height="100"></td>
+      <td><img src="{{ i.image2 }}" width="100" height="100"></td>
+      <td><img src="{{ i.image3 }}" width="100" height="100"></td>
+
+{#        <td><a href="/myapp/shop_delete_gallery/{{ i.id }}" class="btn btn-danger">Delete</a></td>#}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+
+</body>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+
+<body>
+<form action="/myapp/shop_gallery_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
+    {% csrf_token %}
+  <table class="table-bordered table-hover table-striped">
+    <tr>
+      <td width="145" height="103">Image1</td>
+      <td width="306"><label for="image1shop"></label>
+      <input type="file" name="image1shop" id="image1shop" class="form-control" /></td>
+    </tr>
+    <tr>
+      <td height="169">Image2</td>
+      <td><label for="image2shop"></label>
+      <input type="file" name="image2shop" id="image2shop" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td height="266">Image3</td>
+      <td><input type="file" name="image3shop" id="image3shop" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td height="110"><input type="submit" name="add" id="add" value="SUBMIT" class="btn btn-success"/></td>
+      
+    </tr>
+      <tr>
+    <td><a href="/myapp/shop_view_gallery/{{ i.id }}" class="btn btn-info">VIEW</a></td>
+  </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

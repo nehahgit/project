@@ -1,0 +1,48 @@
+{% extends "SHOP/shop_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/edit_instrument_post/" enctype="multipart/form-data">
+    {% csrf_token %}
+  <table class="table-bordered table-hover table-striped">
+      <tr>
+          <td>Category Name</td><input type="hidden" name="id" value="{{ data.id }}">
+          <td><select name="select" class="form-control">
+              {% for i in data2 %}
+              <option value="{{ i.id }}" {% if i.id == data.id %}selected{% endif %}>{{ i.category_name }}</option>
+              {% endfor %}
+          </select></td>
+      </tr>
+    <tr>
+      <td width="92">Name</td>
+      <td width="664"><label for="instru_name"></label>
+      <input type="text" name="instru_name" id="instru_name" value="{{ data.name }}" class="form-control"/></td>
+    </tr>
+
+    <tr>
+      <td>Image</td>
+      <td><input type="file" name="instruimage" id="instruimage" class="form-control"><br>
+          <img src="{{ data.imageinstru }}" height="80px" width="80px">
+      </td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><label for="description"></label>
+      <textarea name="description" id="description" cols="45" rows="5" class="form-control">{{ data.desc }}</textarea></td>
+    </tr>
+    <tr>
+      <td>Rent Amount</td>
+      <td><label for="prize"></label>
+      <input type="text" name="prize" id="prize" value="{{ data.rent_amount }}" class="form-control"/></td>
+    </tr>
+    <tr>
+        <td></td>
+      <td><input type="submit" name="add" id="add" value="EDIT" class="btn btn-success"/></td>
+    </tr>
+    <tr>
+      <td><a href="#">VIEW</a></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

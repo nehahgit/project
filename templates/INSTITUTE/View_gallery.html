@@ -1,0 +1,21 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+
+  <table class="table-bordered table-hover table-striped">
+    <tr>
+      <td width="37">image</td>
+
+    </tr>
+{#      {% for i in data %}#}
+    <tr>
+        <td><a href="/myapp/insti_view_gallery_more/" title="Click to View more"><img src="{{ a.0.im }}" width="100px" height="100px"></a></td>
+{#        <td><a href="/myapp/insti_view_gallery_more">More</a></td>#}
+
+    </tr>
+{#      {% endfor %}#}
+  </table>
+</form>
+</body>
+{% endblock %}

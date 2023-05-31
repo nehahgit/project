@@ -1,0 +1,29 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/insti_pswrd_post/">
+    {% csrf_token %}
+  <table class="table-bordered table-hover table-striped">
+    <tr>
+      <td width="180">Current Password</td>
+      <td width="471"><label for="currentpswrd"></label>
+      <input type="text" name="currentpswrd" id="currentpswrd" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>New Password</td>
+      <td><label for="newpswrd"></label>
+      <input type="text" name="newpswrd" id="newpswrd" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Confirm Password</td>
+      <td><label for="confirmpswrd"></label>
+      <input type="text" name="confirmpswrd" id="confirmpswrd" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="reset" id="reset" value="RESET" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

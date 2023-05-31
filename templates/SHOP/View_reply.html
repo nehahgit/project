@@ -1,0 +1,24 @@
+{% extends "SHOP/sh_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <td width="41">SlNo</td>
+      <td width="107">Date</td>
+      <td width="286">Complaint</td>
+      <td width="167">Reply</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.date }}</td>
+      <td>{{ i.compalint }}</td>
+      <td>{{ i.reply }}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

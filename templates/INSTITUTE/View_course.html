@@ -1,0 +1,28 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+
+  <table class="table-bordered table-hover table-striped">
+    <tr class="bg-dark">
+      <td width="101">Course_Name</td>
+      <td width="102">Available_seat</td>
+      <td width="101">Course Duration</td>
+        <td width="101">Class Duration</td>
+      <td width="101">Fees</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ i.course_name }}</td>
+      <td>{{ i.available_seats }}</td>
+      <td>{{ i.course_duration}}</td>
+        <td>{{ i.class_duration }}</td>
+         <td>{{ i.course_fee}}</td>
+         <td><a href="/myapp/course_edit/{{ i.id }}" class="btn btn-success">EDIT</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+
+</body>
+{% endblock %}

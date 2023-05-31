@@ -1,0 +1,35 @@
+{% extends "INSTITUTE/insti_index.html" %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/course_edit_post/">
+    {% csrf_token %}
+  <table class="table-bordered table-hover table-striped">
+      <input type="hidden" name="cid" value="{{ data.cid }}">
+    <tr>
+      <td width="93">Course_Name</td>
+      <td width="678"><label for="course_name"></label>
+      <input type="text" name="course_name" id="course_name" value="{{ data.course_name }}" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Available_seat</td>
+      <td><label for="seat"></label>
+      <input type="text" name="seat" id="seat"  value="{{ data.available_seats }}"class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td><label for="duration"></label>
+      <input type="text" name="duration" id="duration"  value="{{ data.duration }}" class="form-control"/></td>
+    </tr>
+    <tr>
+      <td>Fees</td>
+      <td><label for="fees"></label>
+      <input type="text" name="fees" id="fees" value="{{ data.available_seats }}" class="form-control" /></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="submit" id="submit" value="SUBMIT" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+
+</body>
+{% endblock %}
