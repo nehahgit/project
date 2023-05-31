@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_button"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/institute"
+            android:icon="@drawable/school"
+            android:title="Institute" />
+        <item
+            android:id="@+id/inst_req"
+            android:icon="@drawable/request_insti"
+            android:title="Institute Request" />
+        <item
+            android:id="@+id/shop"
+            android:icon="@drawable/shopping"
+            android:title="Shop" />
+        <item
+            android:id="@+id/view_materialrequest"
+            android:icon="@drawable/demand"
+            android:title="Material Status" />
+        <item
+            android:id="@+id/view_instrumentrequest"
+            android:icon="@drawable/request"
+            android:title="Instrument Status" />
+        <item
+            android:id="@+id/sendapprating"
+            android:icon="@drawable/star"
+            android:title="Raing" />
+        <item
+            android:id="@+id/viewapprating"
+            android:icon="@drawable/rate"
+            android:title="View Rating" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+    </group>
+</menu>
